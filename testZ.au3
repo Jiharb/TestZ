@@ -41,10 +41,10 @@ While 1
 
 			EndIf
 		Case $List1
-			MsgBox(64, "list", GUICtrlRead($List1))
-			Run('C:\WINDOWS\system32\shimgvw.dll' & ' ' & GUICtrlRead($List1))
+			;MsgBox(64, "list", GUICtrlRead($List1))
+			;Run('C:\WINDOWS\system32\shimgvw.dll' & ' ' & GUICtrlRead($List1))
 			;if IsArray($nMsg) Then _ArrayDisplay($nMsg)
-
+			ShellExecute(GUICtrlRead($List1),'','','',@SW_MAXIMIZE)
 		Case $GUI_EVENT_CLOSE
 			Exit
 
